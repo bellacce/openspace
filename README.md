@@ -1,1 +1,1 @@
-echo "# openspace" >> README.md
+openspace
