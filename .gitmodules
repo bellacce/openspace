@@ -1,0 +1,3 @@
+[submodule "permit/lib/forge-std"]
+	path = permit/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
