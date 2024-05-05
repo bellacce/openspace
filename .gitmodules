@@ -7,3 +7,6 @@
 [submodule "factory/lib/forge-std"]
 	path = factory/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "factory/lib/openzeppelin-contracts"]
+	path = factory/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
