@@ -15,30 +15,39 @@ contract RuneERC20 is ERC20 {
     //代币铸造费用
     uint256 _price;
 
+    string _name;
+
     address private owner;
 
     mapping(address => uint256) public balancesAddr;
 
     //铸造代币名称：name, symbol
-    constructor(
-        address addr,
-        uint256 totalSupply,
-        uint256 perMint,
-        uint256 price,
-        string memory name,
-        string memory symbol
-    ) ERC20(name, symbol) {
+    constructor(address addr) ERC20("tmp_name", "tmp_symbol") {
         owner = addr;
-        _symbol = symbol;
+        // emit Init(owner);
+    }
+
+    function init(uint256 totalSupply, uint256 perMint, uint256 price, string memory name, string memory symbol)
+        external
+    {
+        // emit Init(owner);
+        // emit Init(msg.sender);
+
+        // require(address(0) != owner, "not init constart!");
         _balance = 0;
         _totalSupply = totalSupply;
         _perMint = perMint;
         _price = price;
-        // _mint(addr, _perMint);
+        _name = name;
+        _symbol = symbol;
     }
 
+    event Mint(uint256 price, uint256 price1, uint256 price2);
+
     //开始铸造
-    function mint(address addr, uint256 price) external {
+    function mint(address projAddr, address upAddr, address addr) external payable {
+        uint256 price = msg.value;
+
         require(price > _price, "mint price is not enough");
         require(_totalSupply > (_balance + _perMint), "totalSupply is not enough");
 
@@ -47,7 +56,13 @@ contract RuneERC20 is ERC20 {
         _balance += _perMint;
         balancesAddr[addr] += _perMint;
 
-        //每次铸造费用给own
-        transfer(owner, price);
+        //分配手续费 项目方占20%
+        uint256 projAddrFee = (price * 20) / 100;
+        uint256 upAddrFee = price - projAddrFee;
+
+        emit Mint(price, projAddrFee, upAddrFee);
+
+        payable(projAddr).transfer(projAddrFee);
+        payable(upAddr).transfer(upAddrFee);
     }
 }

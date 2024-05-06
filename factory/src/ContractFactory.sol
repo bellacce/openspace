@@ -1,6 +1,8 @@
 pragma solidity 0.8.25;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/proxy/Clones.sol";
+
 import "./RuneERC20.sol";
 /**
  * 在以太坊上⽤ ERC20 模拟铭⽂铸造，编写一个可以通过最⼩代理来创建ERC20 的⼯⼚合约，⼯⼚合约包含两个方法：
@@ -27,6 +29,21 @@ contract ContractFactory {
     //铸造代币
     event MintInscription(address tokenAddr, uint256 value);
 
+    using Clones for address;
+
+    //账户：铭文合约地址
+    address public runeAddr;
+    //账户：项目方地址
+    address public projAddr;
+    //账户：发行商地址
+    address public upAddr;
+
+    constructor() {
+        runeAddr = address(new RuneERC20(address(this)));
+        //添加项目方
+        projAddr = msg.sender;
+    }
+
     // symbol 表示新创建代币的代号，
     // totalSupply 表示总发行量，
     // perMint 表示单次的创建量，
@@ -36,14 +53,19 @@ contract ContractFactory {
         returns (address addr)
     {
         require(!symbolExists(symbol), "Symbol already exists");
+
         //创建合约
-        RuneERC20 rune = new RuneERC20(msg.sender, totalSupply, perMint, price, symbol, symbol);
+        address runeClone = runeAddr.clone();
+        RuneERC20(runeClone).init(totalSupply, perMint, price, symbol, symbol);
+
         //添加部署合约
-        deployedContracts.push(address(rune));
+        deployedContracts.push(runeClone);
         symbols.push(symbol);
+        //发行商
+        upAddr = msg.sender;
 
         emit DeployInscription(symbol, totalSupply, perMint, price);
-        return address(rune);
+        return runeClone;
     }
 
     //每次调用发行创建时确定的 `perMint` 数量的 token，并收取相应的费用。
@@ -51,7 +73,7 @@ contract ContractFactory {
         emit MintInscription(tokenAddr, msg.value);
 
         //开始铸造
-        RuneERC20(tokenAddr).mint(msg.sender, msg.value);
+        RuneERC20(tokenAddr).mint{value: msg.value}(projAddr, upAddr, msg.sender);
     }
 
     //检查符文是否存在
