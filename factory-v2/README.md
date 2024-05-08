@@ -1,67 +1,27 @@
-## Foundry
+## deploy-sepolia
 
-forge install foundry-rs/forge-std
-forge install OpenZeppelin/openzeppelin-foundry-upgrades --no-commit
-forge install OpenZeppelin/openzeppelin-contracts-upgradeable --no-commit
+nftPermit
+https://sepolia.etherscan.io/address/0x3226DFd387AEc5f0338A4EF1531ED85534BF5e92
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+NFTToken
+https://sepolia.etherscan.io/address/0x3E02F618F4c03c9aA4Abcef95897Be9916241b0C
 
-Foundry consists of:
+NFTMarketV1
+https://sepolia.etherscan.io/address/0x81F31AE604fe5364b224A68418dabEE409608cC3
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+ProxyAdmin
+https://sepolia.etherscan.io/address/0xF3428F1A92433afE983fE9b37fC77f2D8Fd67990
 
-## Documentation
+NFTMarketV2
+https://sepolia.etherscan.io/address/0x890b8e0B769407c2d7B2D16B1Ab82e1EAE8ECE9f
 
-https://book.getfoundry.sh/
 
-## Usage
+TransparentUpgradeableProxy（代理合约）
+https://sepolia.etherscan.io/address/0x8157f6658c77be6fdcf7f1fc1e4fcd86b0721efb
 
-### Build
+![alt text](image.png)
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
+[日志文件](deploy-sepolia-log.txt)
 
 ```shell
 $ forge --help

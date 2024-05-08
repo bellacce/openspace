@@ -1,0 +1,163 @@
+
+== Logs ==
+  nftPermit deployed on 0x3226DFd387AEc5f0338A4EF1531ED85534BF5e92
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 220.66267052 gwei
+
+Estimated total gas used for script: 5613819
+
+Estimated amount required: 1.23876029235591588 ETH
+
+==========================
+##
+Sending transactions [0 - 5].
+⠂ [00:00:00] [################################################################################################################################################] 6/6 txes (0.0s)##
+Waiting for receipts.
+⠂ [00:00:24] [############################################################################################################################################] 6/6 receipts (0.0s)
+##### sepolia
+✅  [Success]Hash: 0x7d6ff72c637e8a3a4be6df8cdb66ea1d7bc705f5704ed4e7e138b26217c448e8
+Contract Address: 0x3E02F618F4c03c9aA4Abcef95897Be9916241b0C
+Block: 5860190
+Paid: 0.121117116262717871 ETH (1124719 gas * 107.686556609 gwei)
+
+
+##### sepolia
+✅  [Success]Hash: 0xe2c876da2442118603a120464df2d29e29864905240b91fbba5cafc72428ab43
+Contract Address: 0x3226DFd387AEc5f0338A4EF1531ED85534BF5e92
+Block: 5860190
+Paid: 0.105283100352043729 ETH (977681 gas * 107.686556609 gwei)
+
+
+##### sepolia
+✅  [Success]Hash: 0xcfd69f14f2478eefd6a1aaa45901889842df2640fd9e75a9acdf6fa71b75a87a
+Contract Address: 0x81F31AE604fe5364b224A68418dabEE409608cC3
+Block: 5860190
+Paid: 0.075491722152720488 ETH (701032 gas * 107.686556609 gwei)
+
+
+##### sepolia
+✅  [Success]Hash: 0x637cbe05e6b003c530f51d2d7e98fd4649d0e28808c2563f218d646312301702
+Contract Address: 0x8157F6658c77bE6FDcf7f1FC1e4fcD86b0721EFB
+Block: 5860190
+Paid: 0.074066705949113591 ETH (687799 gas * 107.686556609 gwei)
+
+
+##### sepolia
+✅  [Success]Hash: 0x5ce821fc4f615a86024c08a4dc67c0c17738eb6d458ef946e35e5429d9588457
+Contract Address: 0x890b8e0B769407c2d7B2D16B1Ab82e1EAE8ECE9f
+Block: 5860191
+Paid: 0.086411768724192261 ETH (786891 gas * 109.814153071 gwei)
+
+
+##### sepolia
+✅  [Success]Hash: 0x145d87f531500f15158ddbb4b8514e98796a896a362cbb70361399d7c47b72a3
+Block: 5860191
+Paid: 0.004155257738053569 ETH (37839 gas * 109.814153071 gwei)
+
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+Total Paid: 0.466525671178841509 ETH (4315961 gas * avg 108.395755429 gwei)
+##
+Start verification for (6) contracts
+Start verifying contract `0x3E02F618F4c03c9aA4Abcef95897Be9916241b0C` deployed on sepolia
+
+Submitting verification for [src/NFTToken.sol:NFTToken] 0x3E02F618F4c03c9aA4Abcef95897Be9916241b0C.
+
+Submitting verification for [src/NFTToken.sol:NFTToken] 0x3E02F618F4c03c9aA4Abcef95897Be9916241b0C.
+
+Submitting verification for [src/NFTToken.sol:NFTToken] 0x3E02F618F4c03c9aA4Abcef95897Be9916241b0C.
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `tc2hnuvjryrv3xcylcvwsrafcegrhgdumrxbaubmh41xc6kbfs`
+        URL: https://sepolia.etherscan.io/address/0x3e02f618f4c03c9aa4abcef95897be9916241b0c
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+Start verifying contract `0x3226DFd387AEc5f0338A4EF1531ED85534BF5e92` deployed on sepolia
+
+Submitting verification for [src/TokenERC2612.sol:TokenERC2612] 0x3226DFd387AEc5f0338A4EF1531ED85534BF5e92.
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `xzbp3nm1p14zirphtb64cnaxsbtijzcyrpakjnngujp2y1uy4h`
+        URL: https://sepolia.etherscan.io/address/0x3226dfd387aec5f0338a4ef1531ed85534bf5e92
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+Start verifying contract `0x81F31AE604fe5364b224A68418dabEE409608cC3` deployed on sepolia
+
+Submitting verification for [src/NFTMarketV1.sol:NFTMarketV1] 0x81F31AE604fe5364b224A68418dabEE409608cC3.
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `l2l8ujpewsudgppxhvquxemratq9ysguf3eamjurx6swmhuzdt`
+        URL: https://sepolia.etherscan.io/address/0x81f31ae604fe5364b224a68418dabee409608cc3
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+Start verifying contract `0x8157F6658c77bE6FDcf7f1FC1e4fcD86b0721EFB` deployed on sepolia
+
+Submitting verification for [lib/openzeppelin-contracts/contracts/proxy/transparent/TransparentUpgradeableProxy.sol:TransparentUpgradeableProxy] 0x8157F6658c77bE6FDcf7f1FC1e4fcD86b0721EFB.
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `kepzjkza3skpi62tjjvk6rw4iid7sp2zxhykbnmdha4smyjere`
+        URL: https://sepolia.etherscan.io/address/0x8157f6658c77be6fdcf7f1fc1e4fcd86b0721efb
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+Start verifying contract `0xF3428F1A92433afE983fE9b37fC77f2D8Fd67990` deployed on sepolia
+
+Submitting verification for [lib/openzeppelin-contracts/contracts/proxy/transparent/ProxyAdmin.sol:ProxyAdmin] 0xF3428F1A92433afE983fE9b37fC77f2D8Fd67990.
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `p7hyguilqr8sieqkrrzgiwwi4vnwhbazfnruiy14tqyn5qsqbs`
+        URL: https://sepolia.etherscan.io/address/0xf3428f1a92433afe983fe9b37fc77f2d8fd67990
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+Start verifying contract `0x890b8e0B769407c2d7B2D16B1Ab82e1EAE8ECE9f` deployed on sepolia
+
+Submitting verification for [src/NFTMarketV2.sol:NFTMarketV2] 0x890b8e0B769407c2d7B2D16B1Ab82e1EAE8ECE9f.
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `gi6bktbzvmgnweradvnwdjqwntqadfuyuqvhtftyjidfpfmtxw`
+        URL: https://sepolia.etherscan.io/address/0x890b8e0b769407c2d7b2d16b1ab82e1eae8ece9f
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+All (6) contracts were verified!
+
+Transactions saved to: /Users/xuningkai/Documents/workspace-block/project/openspace/factory-v2/broadcast/ProxyUse.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /Users/xuningkai/Documents/workspace-block/project/openspace/factory-v2/cache/ProxyUse.s.sol/11155111/run-latest.json
