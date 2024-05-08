@@ -1,5 +1,9 @@
 ## Foundry
 
+forge install foundry-rs/forge-std
+forge install OpenZeppelin/openzeppelin-foundry-upgrades --no-commit
+forge install OpenZeppelin/openzeppelin-contracts-upgradeable --no-commit
+
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
 Foundry consists of:

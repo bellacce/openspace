@@ -1,5 +1,7 @@
  forge init
 
+ forge init factory-v2 --no-commit
+
  forge build
 
  forge install OpenZeppelin/openzeppelin-contracts
